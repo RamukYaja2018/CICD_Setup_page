@@ -1,0 +1,17 @@
+name: Hello World Pipeline
+
+# 1. TRIGGER: Tells GitHub when to run this script
+on: [push]
+
+jobs:
+  # 2. JOB: A group of steps that run on the same runner
+  say-hello-job:
+    runs-on: ubuntu-latest # The virtual machine type
+
+    # 3. STEPS: The actual tasks to perform
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4 # This "borrows" a pre-made script to pull your code
+
+      - name: Print a greeting
+        run: echo "Hello World"
