@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4 # This "borrows" a pre-made script to pull your code
 
       - name: Print a greeting
-        run: echo "Hello World"
+        run: echo "Hello World and myself"
